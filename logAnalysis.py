@@ -66,8 +66,6 @@ def aggDownloadType(inputDF):
     outputDF = inputDF.groupBy("download_type","logdate").agg(sum("size").alias('total_size'), round(avg("size"),0).alias('average_size'))
     return outputDF
 
-# Do not modify the code after this line
-#-----------------------------------------------------------------#
 
 if __name__ == "__main__":
     
